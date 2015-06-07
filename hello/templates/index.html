@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What should I listen next?</title>
+    <link rel="shortcut icon" href="/stylesheets/icons/logo.png">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/stylesheets/js/scripts.js"></script>
+    <link type="text/css" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/stylesheets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+  </head>
+
+  <body>
+      <div class="bodyWrap">
+        <a href='#' id='fb_logout_button' class='hidden' onclick="logOutApp()">Log out</a>
+        <div id="container">
+            <div id="header">
+               <h1 id='title'> What should I listen next? </h1>
+           </div>
+           <div id="body">
+              <div id='messages'>
+                <h3 id="status">
+                </h3>
+                <br>
+                 <div id='fbbutton'>
+                  <fb:login-button id='fb_login_button' class = 'shown' scope="public_profile,email,user_likes" data-size="xlarge" onlogin="checkLoginState();">
+                  </fb:login-button>
+                 </div>
+                <br>
+                <h3 id="info"> </h3>
+              </div>
+              <div id="images">
+                <img id='kitty' src='/stylesheets/img/guitarist-cat_2.png'/ style="">
+                <div id="all_results"> </div>
+              </div>
+           </div>
+           <h3 id="footer">
+             Designed by <a href="https://www.facebook.com/ihorlukianovv">ihorlukianov</a> and <a href="https://www.facebook.com/ana.shevnina">anashevnina</a>. 
+           </h3>
+        </div>
+      <a href="#" class="back-to-top" style="display: inline;">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+      </div>
+  </body>
+</html>
