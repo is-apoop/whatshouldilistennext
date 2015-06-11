@@ -9,7 +9,7 @@ handlers:
   static_dir: stylesheets
 
 - url: /.*
-  script: myproject.wsgi.application
+  script: GAEproject.wsgi.application
 
 libraries:
 - name: django

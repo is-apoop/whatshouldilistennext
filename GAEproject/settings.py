@@ -1,4 +1,4 @@
-# Django settings for myproject project.
+# Django settings for GAEproject project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -61,15 +61,15 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = 'E:/GAE/appengine-try-python-django/myproject/sitestatic'
+STATIC_ROOT = 'E:/GAE/appengine-try-python-django/GAEproject/sitestatic'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'myproject/sitestatic/hello/'
+STATIC_URL = 'GAEproject/sitestatic/WhatShouldIListenNext/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    'hello/static',
+    'WhatShouldIListenNext/static',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -104,10 +104,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'myproject.urls'
+ROOT_URLCONF = 'GAEproject.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'myproject.wsgi.application'
+WSGI_APPLICATION = 'GAEproject.wsgi.application'
 
 TEMPLATE_DIRS = (
 	'templates',
@@ -118,7 +118,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
-    'hello',
+    'WhatShouldIListenNext',
 )
 
 # A sample logging configuration. The only tangible logging
