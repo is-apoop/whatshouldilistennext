@@ -17,7 +17,7 @@ var fadeInDuration = 800;
     }
   }
   function resetContent() {
-      document.getElementById('status').innerHTML = 'Please Log in via Facebook to find out!';
+      document.getElementById('status').innerHTML = 'Please Log in via Facebook or type the artist name to find out!';
       $("#all_results").text("");
       $('#kitty').attr("src","/stylesheets/img/guitarist-cat_2.png");
       $('#kitty').fadeIn(fadeInDuration);
@@ -81,8 +81,6 @@ var fadeInDuration = 800;
   // successful.  See statusChangeCallback() for when this call is made.
   function justDoIt() {
     var musicList;
-    $("#all_results").text("");
-    $('#kitty').hide();
     $('#fb_logout_button').removeClass('hidden').addClass('shown');
     $('#fb_login_button').removeClass('shown').addClass('hidden');
     console.log('Welcome!  Fetching your information.... ');
@@ -270,6 +268,8 @@ function searchArtist(names, callback) {
         }) ;
 }
 function addNewArtists(artists) {
+    $("#all_results").text("");
+    $('#kitty').hide();
     console.log('searching for', artists);
     searchArtist(artists, function(data) {
         console.log('search', data);
@@ -298,6 +298,7 @@ function info(txt) {
     $("#info").text(txt);
 }
 
+
 //Back to top button script
 $(document).ready(function() {
     var offset = 250;
@@ -312,7 +313,15 @@ $(document).ready(function() {
             $('.back-to-top').fadeOut(fadeInDuration);
         }
     });
+    $("#artist").on('keydown', function(evt) {
+        if (evt.keyCode == 13) {
+            addNewArtists($("#artist").val());
+        }
+    });
 
+    $("#go").on("click", function() {
+        addNewArtists($("#artist").val());
+    });
     $('.back-to-top').click(function(event) {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, duration);

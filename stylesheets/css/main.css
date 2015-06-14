@@ -19,7 +19,22 @@ h2 {
   font-family: Haymaker;
   font-size: 1.5em;
 }
-
+#artist-input {
+  padding-top: 10px;
+  position: relative;
+}
+#artist {
+  border-width: 2px;
+  border-style: solid;
+  font-weight: bolder;
+  text-align: center;
+}
+#go {
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  margin-left: 10px;
+}
 #title {
   position: relative;
   top: 0;

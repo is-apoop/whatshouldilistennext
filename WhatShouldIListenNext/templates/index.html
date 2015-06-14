@@ -22,11 +22,16 @@
               <div id='messages'>
                 <h3 id="status">
                 </h3>
-                <br>
                  <div id='fbbutton'>
-                  <fb:login-button id='fb_login_button' class = 'shown' scope="public_profile,email,user_likes" data-size="xlarge" onlogin="checkLoginState();">
+                  <fb:login-button id='fb_login_button' class = 'shown' scope="public_profile,email,user_likes" data-size="large" onlogin="checkLoginState();">
                   </fb:login-button>
                  </div>
+                 <div id="artist-input">
+                  <span>
+                     <input title="Artist" type="text"  size=20% id="artist" name="artist" value='Queen'/>
+                  </span>
+                  <input type="image" src="/stylesheets/img/cat_button.jpg" name="saveForm" class="btTxt submit" id="go" title="Find the artist! Meow meow!" />
+                  </div>
                 <br>
                 <h3 id="info"> </h3>
               </div>
